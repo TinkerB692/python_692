@@ -1,0 +1,29 @@
+import turtle
+import random
+
+
+x = 1
+window = turtle.Screen()
+window.bgcolor("BLACK")
+
+obj = turtle.Turtle()
+obj.speed(100)
+
+i = 0
+while x < 256:
+   r=random.randint(0,255)
+   g=random.randint(0,255)
+   b=random.randint(0,255)
+   
+   turtle.colormode(255)
+   obj.pencolor(r,g,b)
+
+   if x<244:
+        obj.pensize(0.1)
+        obj.forward(50 + x)
+        obj.right(91.5)
+        x = x+1
+        i = (i+1)%255
+        
+    
+turtle.done()
